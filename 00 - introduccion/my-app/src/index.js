@@ -1,4 +1,5 @@
-console.log("Hello World");
+import { heroes, heros } from "./data/heros";
+/* console.log("Hello World");
 
 const persona = {
   nombre: "Fran",
@@ -16,7 +17,7 @@ const {
 } = persona;
 console.log(nombre);
 console.log(apellido);
-console.log(city);
+console.log(city); */
 
 /*
 // Crear clones de objetos
@@ -41,4 +42,32 @@ const arry3 = arry2.map(function (number) {
 console.log(arry);
 console.log(arry2);
 console.log(arry3);
- */
+ 
+const arry = [1, 2, 3, 4];
+const [, , pos3] = arry;
+
+console.log(pos3);
+
+const arry2 = () => {
+  return ["ABC", 123];
+};
+
+const [, numbers] = arry2();
+
+console.log(numbers);*/
+
+console.log(heroes);
+
+/* const getHero = (id) => {
+  return heroes.find((hero) => {
+    if (hero.id == id) {
+      return true;
+    }
+    return false;
+  });
+}; */
+const getHero = (id) => {
+  return heroes.find((hero) => hero.id == id);
+};
+
+console.log(getHero(1));
