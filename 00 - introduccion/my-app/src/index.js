@@ -9,16 +9,26 @@ const persona = {
   },
 };
 
+const {
+  nombre,
+  apellido,
+  address: { city },
+} = persona;
+console.log(nombre);
+console.log(apellido);
+console.log(city);
+
+/*
 // Crear clones de objetos
 const persona2 = { ...persona };
 persona2.apellido = "Messi";
 
 console.log({ persona });
-console.log({ persona2 });
+console.log({ persona2 }); */
 
 // Arrays
 
-const arry = [1, 2, 3, 4];
+/* const arry = [1, 2, 3, 4];
 const arry2 = [...arry, 5];
 
 const arry3 = arry2.map(function (number) {
@@ -31,3 +41,4 @@ const arry3 = arry2.map(function (number) {
 console.log(arry);
 console.log(arry2);
 console.log(arry3);
+ */
