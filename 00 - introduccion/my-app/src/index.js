@@ -72,7 +72,7 @@ const getHero = (id) => {
 
 console.log(getHero(1));*/
 
-const getHero = (id) => {
+/* const getHero = (id) => {
   return heroes.find((hero) => hero.id == id);
 };
 
@@ -87,6 +87,26 @@ const promise = new Promise((resolve, reject) => {
 promise
   .then((hero) => {
     console.log("Then promesa");
+    console.table(hero);
+  })
+  .catch((err) => console.warn(err)); */
+
+const getHeroAsync = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const getHero = (id) => {
+        return heroes.find((hero) => hero.id == id);
+      };
+      if (getHero(id)) {
+        resolve(getHero(id));
+      } else {
+        reject("Heroe no encontrado");
+      }
+    }, 2000);
+  });
+};
+getHeroAsync(10)
+  .then((hero) => {
     console.table(hero);
   })
   .catch((err) => console.warn(err));
