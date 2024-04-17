@@ -56,18 +56,37 @@ const [, numbers] = arry2();
 
 console.log(numbers);*/
 
-console.log(heroes);
+/*console.log(heroes);
 
-/* const getHero = (id) => {
+ const getHero = (id) => {
   return heroes.find((hero) => {
     if (hero.id == id) {
       return true;
     }
     return false;
   });
-}; */
+}; 
 const getHero = (id) => {
   return heroes.find((hero) => hero.id == id);
 };
 
-console.log(getHero(1));
+console.log(getHero(1));*/
+
+const getHero = (id) => {
+  return heroes.find((hero) => hero.id == id);
+};
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("2 segundos después");
+    const hero = getHero(2);
+    resolve(hero);
+  }, 2000);
+});
+
+promise
+  .then((hero) => {
+    console.log("Then promesa");
+    console.table(hero);
+  })
+  .catch((err) => console.warn(err));
