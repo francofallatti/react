@@ -1,27 +1,23 @@
 import { useState } from 'react'
+import { AddCategory } from './components/AddCategory'
+import { GiftGrid } from './components/GiftGrid'
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState([
-    'Lamborghini',
-    'Ferrari',
-    'Bugatti',
-    'Bentley',
-    'Aston Martin',
-    'Pagani',
-  ])
+  const [categories, setCategories] = useState(['Pagani'])
 
-  const onAddCategory = () => {
-    setCategories(['McLaren', ...categories])
+  const onAddCategory = (newCategory) => {
+    if (categories.includes(newCategory)) return
+    setCategories([newCategory, ...categories])
   }
 
   return (
     <>
       <h1>GifExpertApp</h1>
-      <button onClick={onAddCategory}>Agregar</button>
+      <AddCategory onNewCategory={onAddCategory} />
       <ol>
-        {categories.map((category) => {
-          return <li key={category}>{category}</li>
-        })}
+        {categories.map((category) => (
+          <GiftGrid key={category} category={category} />
+        ))}
       </ol>
     </>
   )
