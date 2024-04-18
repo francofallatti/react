@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { AddCategory } from './components/AddCategory'
-import { GiftGrid } from './components/GiftGrid'
+import { GifGrid } from './components/GifGrid'
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['Pagani'])
+  const [categories, setCategories] = useState([])
 
   const onAddCategory = (newCategory) => {
     if (categories.includes(newCategory)) return
@@ -16,7 +16,7 @@ export const GifExpertApp = () => {
       <AddCategory onNewCategory={onAddCategory} />
       <ol>
         {categories.map((category) => (
-          <GiftGrid key={category} category={category} />
+          <GifGrid key={category} category={category} />
         ))}
       </ol>
     </>
