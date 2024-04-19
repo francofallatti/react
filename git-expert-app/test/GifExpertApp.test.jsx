@@ -19,5 +19,3 @@ describe('Test on <GifExpertApp />', () => {
     expect(screen.getByText('GifExpertApp'))
   })
 })
-
-//and onAddCategory
