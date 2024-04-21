@@ -10,10 +10,11 @@ import "./index.css";
 // import { FocusScreen } from "./04-useRef/FocusScreen";
 // import { Memorize } from "./05-memos/Memorize";
 // import { MemoHook } from "./05-memos/MemoHook";
-import { CallbackHook } from "./05-memos/CallbackHook";
+// import { CallbackHook } from "./05-memos/CallbackHook";
+import { Padre } from "./06-tarea-memo/Padre";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   /* <React.StrictMode> */
-  <CallbackHook />
+  <Padre />
   /* </React.StrictMode> */
 );
