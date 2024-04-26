@@ -1,1 +1,1 @@
-Practice in React 
+React Practice
